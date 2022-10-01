@@ -1,0 +1,150 @@
+:root {
+    --btn-bg-color: #dadedcdd;
+    --btn-bg-secondColor: yellow;
+}
+
+* {
+    margin: 0;
+    padding: 0
+}
+
+body {
+    background: #eee;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+  }
+  #canvas {
+    background: #fff;
+  }
+
+#principal {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100vh;
+    padding: 0px 10px 0px 10px;
+}
+
+header {
+    text-decoration: underline;
+}
+
+.terms {
+    height: 400px;
+    background-color: var(--btn-bg-color);
+    font-size: 0.8rem;
+}
+
+.checkInformation {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#btn-check {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#termo {
+    width: 25px;
+    height: 25px;
+    font-weight: bold;
+}
+
+.btn-clear {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+#btn-clear {
+    background-color: var(--btn-bg-secondColor);
+    height: 30px;
+    width: 50px;
+}
+
+.signature {
+    display: flex;
+    justify-content: center;
+}
+
+canvas {
+    height: 100px;
+    width: 400px;
+ } 
+
+.btns {
+    display: flex;
+    justify-content: space-around;
+}
+
+.btns input {
+    height: 35px;
+    width: 100px;
+    background-color: var(--btn-bg-color);
+    font-weight: 400;
+    border: none;
+}
+
+/*Tablet*/
+
+@media screen and (min-width: 500px) and (max-width: 1023px) {
+    
+    #principal {
+        justify-content: flex-start;
+        gap: 5px;
+        position: fixed;   
+    }
+
+    #btn-clear {
+        height: 19px;
+        width: 50px;
+    }
+
+    .signature {
+        display: block;
+    }
+    
+    canvas {
+        height: 100px;
+        width: 100%;
+        background-color: red;
+    } 
+
+}
+
+
+/*Smartphone*/
+
+@media screen and (max-width: 400px) {
+
+ #principal {
+ justify-content: flex-start;
+ gap: 10px;
+ position: fixed;   
+ }
+
+ .terms {
+    height: 300px;
+    font-size: 0.6rem;
+ }
+
+ #btn-clear {
+    height: 20px;
+    width: 50px;
+  }
+
+ .signature {
+    display: block;
+ }
+
+ canvas {
+    height: 100px;
+    width: 100%;
+    background-color: red;
+ } 
+ 
+}
