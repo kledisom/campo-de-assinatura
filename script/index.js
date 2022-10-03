@@ -5,7 +5,7 @@ const signaturePad = new SignaturePad(canvas);
 
 signaturePad.minWidth = 1;
 signaturePad.maxWidth = 1;
-signaturePad.penColor = "rgb(66, 133, 244)";
+signaturePad.penColor = "#000";
 
 function resizeCanvas() {
   const ratio =  Math.max(window.devicePixelRatio || 1, 1);
@@ -21,6 +21,12 @@ resizeCanvas();
 btnClear.addEventListener('click', function (event) {
   signaturePad.clear();
 }); 
+/*==========*/
+function generatePDF() {
+  const element = document.querySelector("#principal");
+  
+  html2pdf().from(element).save();
+}
 
 /* // Returns signature image as data URL (see https://mdn.io/todataurl for the list of possible parameters)
 signaturePad.toDataURL(); // save image as PNG

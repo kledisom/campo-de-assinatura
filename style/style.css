@@ -84,6 +84,7 @@ canvas {
     background-color: var(--btn-bg-color);
     font-weight: 400;
     border: none;
+    cursor: pointer;
 }
 
 /*Tablet*/
@@ -142,4 +143,14 @@ canvas {
     width: 100%;
  } 
  
+}
+
+@media print {
+    .btns {
+        display: none;
+    }
+
+    .btn-clear {
+        display: none;
+    }
 }
